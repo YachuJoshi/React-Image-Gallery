@@ -1,13 +1,15 @@
 import React from "react";
-import "./styles/base.scss";
+import "./styles/main.scss";
 
-import { Gallery } from "./Gallery";
+import { Header } from "./components";
+import { Gallery } from "./components";
 
 function App() {
   return (
-    <div className="container">
+    <>
+      <Header />
       <Gallery />
-    </div>
+    </>
   );
 }
 

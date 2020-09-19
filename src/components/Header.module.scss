@@ -1,0 +1,13 @@
+@import '../styles/main';
+
+.Header {
+  background-color: $header-background-color;
+  padding: 20px 30px;
+  color: $color-white;
+  text-align: center;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
