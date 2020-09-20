@@ -1,0 +1,21 @@
+@import '../styles/main';
+
+.Circle {
+  display: block;
+  border: 2px solid $color-white;
+  height: 12.5px;
+  width: 12.5px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    border: 2px solid $color-primary;
+  }
+
+  &.Active {
+    background-color: $color-white;
+    border: 2px solid $color-white;
+  }
+}

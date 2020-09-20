@@ -3,7 +3,7 @@ import cx from "classnames";
 
 import styles from "./Header.module.scss";
 
-import { Container } from "./Container";
+import { Container } from "../ui-kit";
 
 export const Header = () => (
   <header className={cx(styles.Header)}>

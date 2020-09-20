@@ -1,0 +1,31 @@
+@import '../styles/main';
+
+.Icon {
+  position: absolute;
+  height: 160px;
+  width: 80px;
+  color: $color-white;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-filter: drop-shadow(0 6px 4px rgba(0, 0, 0, .7));
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, .7));
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: $color-primary;
+    transform: translateY(-50%) scale(1.06);
+  }
+
+  &:active {
+    transform: translateY(calc(-50% + 6px)) scale(1.06);
+  }
+
+  &.Left {
+    left: 20px;
+  }
+
+  &.Right {
+    right: 20px;
+  }
+}

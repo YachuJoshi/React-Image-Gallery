@@ -1,6 +1,23 @@
-import React from "react";
-import { Container } from "./Container";
+import React, { useState } from "react";
+import { PICTURES, Length } from "../Content";
+import { Container } from "../ui-kit";
+
+import styles from "./Gallery.module.scss";
+import { Icons } from "./Icons";
+import { PictureBoard } from "./PictureBoard";
+import { CircleSelection } from "./CircleSelection";
 
 export const Gallery = () => {
-  return <Container>IMAGE GALLERY</Container>;
+  const [activeIndex, setActiveIndex] = useState(0);
+  return (
+    <Container className={styles.Container}>
+      <PictureBoard pictures={PICTURES} activeIndex={activeIndex} />
+      <Icons setActiveIndex={setActiveIndex} maxLength={PICTURES.length - 1} />
+      <CircleSelection
+        size={Length}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
+    </Container>
+  );
 };

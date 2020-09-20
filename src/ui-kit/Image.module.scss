@@ -1,0 +1,19 @@
+@import '../styles/main.scss';
+
+.ImageContainer {
+  height: 600px;
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.4s linear;
+}
+
+.Image {
+  height: 100%;
+  width: 100%;
+}
