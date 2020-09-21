@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PICTURES, MINIFIED, Length } from "../Content";
 import { Container } from "../ui-kit";
 
@@ -9,21 +9,12 @@ import { CircleSelection } from "./CircleSelection";
 import { ImageThumbnails } from "./ImageThumbnails";
 
 export const Gallery = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <Container className={styles.Container}>
-      <PictureBoard pictures={PICTURES} activeIndex={activeIndex} />
-      <Icons setActiveIndex={setActiveIndex} maxLength={PICTURES.length - 1} />
-      <CircleSelection
-        size={Length}
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-      />
-      <ImageThumbnails
-        pictures={MINIFIED}
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-      />
+      <PictureBoard pictures={PICTURES} />
+      <Icons maxLength={PICTURES.length - 1} />
+      <CircleSelection size={Length} />
+      <ImageThumbnails pictures={MINIFIED} />
     </Container>
   );
 };

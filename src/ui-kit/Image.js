@@ -1,10 +1,12 @@
 import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
+import { useActiveIndexContext } from "../context";
 
 import styles from "./Image.module.scss";
 
-export const Image = ({ src, alt, className, activeIndex }) => {
+export const Image = ({ src, alt, className }) => {
+  const { activeIndex } = useActiveIndexContext();
   return (
     <figure
       className={styles.ImageContainer}

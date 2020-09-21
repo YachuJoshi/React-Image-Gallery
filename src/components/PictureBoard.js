@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "../ui-kit";
 import styles from "./PictureBoard.module.scss";
 
-export const PictureBoard = ({ pictures, activeIndex }) => {
+export const PictureBoard = ({ pictures }) => {
   return (
     <div className={styles.Gallery}>
       {pictures.map((picture, index) => (
@@ -10,7 +10,6 @@ export const PictureBoard = ({ pictures, activeIndex }) => {
           key={index}
           src={picture}
           alt="image-landscape"
-          activeIndex={activeIndex}
         />
       ))}
     </div>
