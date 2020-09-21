@@ -7,6 +7,15 @@ import Picture6 from "./static/6.jpg";
 import Picture7 from "./static/7.jpg";
 import Picture8 from "./static/8.jpg";
 
+import Min1 from "./minified/1.jpg";
+import Min2 from "./minified/2.jpg";
+import Min3 from "./minified/3.jpg";
+import Min4 from "./minified/4.jpg";
+import Min5 from "./minified/5.jpg";
+import Min6 from "./minified/6.jpg";
+import Min7 from "./minified/7.jpg";
+import Min8 from "./minified/8.jpg";
+
 export const PICTURES = [
   Picture1,
   Picture2,
@@ -19,3 +28,5 @@ export const PICTURES = [
 ];
 
 export const Length = PICTURES.map((_, index) => index);
+
+export const MINIFIED = [Min1, Min2, Min3, Min4, Min5, Min6, Min7, Min8];

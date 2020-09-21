@@ -1,0 +1,34 @@
+@import '../styles/main';
+
+.ImageThumbnailsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ThumbnailInner {
+  cursor: pointer;
+  height: 80px;
+  width: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 4px solid transparent;
+  transition: all 0.2s ease-out;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    border: 4px solid $color-primary-light;
+  }
+
+  &.Active {
+    border: 4px solid $color-primary;
+  }
+}
+
+.ThumbnailImage {
+  height: 100%;
+  width: 100%;
+}
