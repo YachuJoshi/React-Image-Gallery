@@ -1,7 +1,26 @@
 @import '../styles/main';
 
 .Gallery {
-  height: 600px;
-  display: flex;
-  overflow: hidden;
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    height: 600px;
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+.GalleryMobile {
+  width: 100%;
+}
+
+
+.Image {
+  display: block;
+  height: 360px;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }

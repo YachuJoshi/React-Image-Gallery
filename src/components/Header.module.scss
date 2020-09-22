@@ -7,7 +7,12 @@
   text-align: center;
 
   h1 {
+    font-size: 28px;
     text-transform: uppercase;
     font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
   }
 }

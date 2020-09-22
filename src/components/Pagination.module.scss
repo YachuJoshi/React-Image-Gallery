@@ -1,0 +1,19 @@
+@import '../styles/main';
+
+.Pagination {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-30px);
+
+  span {
+    &:not(:last-child) {
+      margin-right: 8px;
+
+      @include media-breakpoint-up(md) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

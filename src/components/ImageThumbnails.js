@@ -6,7 +6,7 @@ export const ImageThumbnails = ({ pictures }) => {
   return (
     <div className={styles.ImageThumbnailsContainer}>
       {pictures.map((picture, index) => (
-        <Thumbnail picture={picture} index={index} />
+        <Thumbnail key={index} picture={picture} index={index} />
       ))}
     </div>
   );

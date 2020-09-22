@@ -7,6 +7,7 @@ import styles from "./Image.module.scss";
 
 export const Image = ({ src, alt, className }) => {
   const { activeIndex } = useActiveIndexContext();
+
   return (
     <figure
       className={styles.ImageContainer}

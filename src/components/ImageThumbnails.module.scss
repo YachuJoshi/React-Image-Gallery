@@ -1,8 +1,15 @@
 @import '../styles/main';
 
 .ImageThumbnailsContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 5px;
+  padding: 0 5px;
+  justify-items: center;
+  transform: translateY(-6px);
 
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    padding: 0;
+  }
+}

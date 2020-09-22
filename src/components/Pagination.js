@@ -1,11 +1,11 @@
 import React from "react";
 import { Circle } from "../ui-kit";
 
-import styles from "./CircleSelection.module.scss";
+import styles from "./Pagination.module.scss";
 
-export const CircleSelection = ({ size }) => {
+export const Pagination = ({ size }) => {
   return (
-    <div className={styles.CircleSelection}>
+    <div className={styles.Pagination}>
       {size.map((_, index) => (
         <Circle key={index} index={index} />
       ))}

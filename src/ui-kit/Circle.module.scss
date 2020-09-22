@@ -3,12 +3,17 @@
 .Circle {
   display: block;
   border: 2px solid $color-white;
-  height: 12.5px;
-  width: 12.5px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s ease-out;
+
+  @include media-breakpoint-up(md) {
+    height: 12.5px;
+    width: 12.5px;
+  }
 
   &:hover {
     border: 2px solid $color-primary-light;

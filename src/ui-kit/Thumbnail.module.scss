@@ -2,16 +2,12 @@
 
 .ThumbnailInner {
   cursor: pointer;
-  height: 80px;
-  width: 140px;
+  height: 100px;
+  width: 100%;
   border-radius: 10px;
   overflow: hidden;
   border: 4px solid transparent;
   transition: all 0.2s ease-out;
-
-  &:not(:last-child) {
-    margin-right: 8px;
-  }
 
   &:hover {
     border: 4px solid $color-primary-light;
