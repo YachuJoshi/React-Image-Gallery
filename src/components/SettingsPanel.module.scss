@@ -1,0 +1,64 @@
+@import '../styles/main';
+
+.Heading {
+  font-size: 24px;
+  color: $color-primary-dark;
+  text-transform: uppercase;
+  margin: 10px 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 28px;
+  }
+}
+
+.Controls {
+  display: flex;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 3px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #eeeeee;
+  }
+}
+
+.IntervalInput {
+  font-size: 14px;
+  transform: translateX(-1px);
+  padding: 6px 12px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 3px solid #ccc;
+  width: 30%;
+
+  @include media-breakpoint-up(md) {
+    width: 10%;
+  }
+
+  &:focus {
+    border: 3px solid #bbb;
+    outline: none;
+  }
+}
+
+.Checkboxes {
+  margin-top: 10px;
+
+  &>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  span {
+    margin-left: 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 120%;
+  }
+}

@@ -9,8 +9,9 @@ import styles from "./PictureBoard.module.scss";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export const PictureBoard = ({ pictures }) => {
+export const PictureBoard = ({ pictures, interval, isLeftToRight }) => {
   const { activeIndex, setActiveIndex } = useActiveIndexContext();
+  const direction = isLeftToRight ? "incremental" : "decremental";
   return (
     <>
       <div className={styles.Gallery}>
@@ -21,6 +22,8 @@ export const PictureBoard = ({ pictures }) => {
 
       <AutoPlaySwipeableViews
         enableMouseEvents
+        interval={interval}
+        direction={direction}
         index={activeIndex}
         onChangeIndex={() =>
           setActiveIndex(() => {

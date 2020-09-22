@@ -1,11 +1,16 @@
 @import '../styles/main';
 
 .Pagination {
+  position: absolute;
   display: flex;
-  width: auto;
-  justify-content: center;
   align-items: center;
-  transform: translateY(-30px);
+  top: 330px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media-breakpoint-up(md) {
+    top: 570px;
+  }
 
   span {
     &:not(:last-child) {
