@@ -19,6 +19,7 @@
   transition: all 0.2s ease-out;
 
   @include media-breakpoint-up(md) {
+    right: 20px;
     font-size: 36px;
     top: 549.5px;
   }
