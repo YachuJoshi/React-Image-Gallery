@@ -1,5 +1,15 @@
 @import '../styles/main';
 
+.SettingsPanel {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    align-items: stretch;
+  }
+}
+
 .Heading {
   font-size: 24px;
   color: $color-primary-dark;
@@ -13,6 +23,11 @@
 
 .Controls {
   display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(md) {
+    justify-content: flex-start;
+  }
 
   span {
     display: flex;

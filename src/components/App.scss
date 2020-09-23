@@ -1,0 +1,40 @@
+@import '../styles/main';
+
+.fullscreen-enabled {
+  .picture-board {
+    height: 60vh;
+
+    @include media-breakpoint-up(md) {
+      height: 100vh;
+    }
+  }
+
+  .picture-board-mobile {
+    padding: 0;
+  }
+
+  .image-thumbnail {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  .icon-arrows {
+    top: 50%;
+  }
+
+  .icon-play-toggle,
+  .icon-full-screen {
+    left: 20px;
+
+    @include media-breakpoint-up(md) {
+      top: auto;
+      bottom: 20px;
+    }
+  }
+
+  .icon-full-screen {
+    left: auto;
+    right: 20px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import { Image } from "../ui-kit";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
@@ -9,12 +10,17 @@ import styles from "./PictureBoard.module.scss";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export const PictureBoard = ({ pictures, interval, isLeftToRight }) => {
+export const PictureBoard = ({
+  pictures,
+  interval,
+  isPlaying,
+  className,
+  mobileDimClassName,
+}) => {
   const { activeIndex, setActiveIndex } = useActiveIndexContext();
-  const direction = isLeftToRight ? "incremental" : "decremental";
   return (
     <>
-      <div className={styles.Gallery}>
+      <div className={cx(styles.Gallery, className)}>
         {pictures.map((picture, index) => (
           <Image key={index} src={picture} alt="image-landscape" />
         ))}
@@ -22,8 +28,8 @@ export const PictureBoard = ({ pictures, interval, isLeftToRight }) => {
 
       <AutoPlaySwipeableViews
         enableMouseEvents
+        autoplay={isPlaying}
         interval={interval}
-        direction={direction}
         index={activeIndex}
         onChangeIndex={() =>
           setActiveIndex(() => {
@@ -31,7 +37,7 @@ export const PictureBoard = ({ pictures, interval, isLeftToRight }) => {
             return activeIndex + 1;
           })
         }
-        slideClassName={styles.GalleryMobile}
+        slideClassName={cx(styles.GalleryMobile, mobileDimClassName)}
       >
         {pictures.map((picture, index) => (
           <img

@@ -3,14 +3,14 @@ import cx from "classnames";
 import { useActiveIndexContext } from "../context";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import styles from "./Icons.module.scss";
+import styles from "./Arrows.module.scss";
 
-export const Icons = ({ maxLength }) => {
+export const Arrows = ({ maxLength, className }) => {
   const { setActiveIndex } = useActiveIndexContext();
   return (
     <>
       <FiChevronLeft
-        className={cx(styles.Icon, styles.Left)}
+        className={cx(styles.Icon, styles.Left, className)}
         onClick={() =>
           setActiveIndex((prevIndex) => {
             if (prevIndex === 0) return maxLength;
@@ -19,7 +19,7 @@ export const Icons = ({ maxLength }) => {
         }
       />
       <FiChevronRight
-        className={cx(styles.Icon, styles.Right)}
+        className={cx(styles.Icon, styles.Right, className)}
         onClick={() =>
           setActiveIndex((prevIndex) => {
             if (prevIndex === maxLength) return 0;

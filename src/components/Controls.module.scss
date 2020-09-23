@@ -1,26 +1,18 @@
 @import '../styles/main';
 
-.Container {
-  margin: 16px auto;
-  position: relative;
 
-  @include media-breakpoint-up(md) {
-    margin: 32px auto;
-  }
-}
-
-.FullScreenIcon {
+.Icon {
   position: absolute;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
   color: $color-white;
-  top: 325px;
-  right: 30px;
+  top: 328px;
+  left: 30px;
   transition: all 0.2s ease-out;
 
   @include media-breakpoint-up(md) {
-    font-size: 36px;
-    top: 549.5px;
+    font-size: 28px;
+    top: 555px;
   }
 
   &:hover {

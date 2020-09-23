@@ -10,7 +10,7 @@ export const SettingsPanel = ({
 }) => {
 
   return (
-    <>
+    <div className={styles.SettingsPanel}>
       <h1 className={styles.Heading}>Settings</h1>
       <div className={styles.Controls}>
         <span>Play Interval</span>
@@ -34,6 +34,6 @@ export const SettingsPanel = ({
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
