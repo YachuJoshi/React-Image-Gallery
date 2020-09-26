@@ -26,6 +26,6 @@ export const Thumbnail = ({ picture, index }) => {
 };
 
 Thumbnail.propTypes = {
-  picture: PropTypes.stringR.isRequired,
+  picture: PropTypes.string.isRequired,
   index: PropTypes.number,
 };
