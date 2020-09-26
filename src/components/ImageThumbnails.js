@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import PropTypes from "prop-types";
 import styles from "./ImageThumbnails.module.scss";
 import { Thumbnail } from "../ui-kit/Thumbnail";
 
@@ -11,4 +12,8 @@ export const ImageThumbnails = ({ pictures, className }) => {
       ))}
     </div>
   );
+};
+
+ImageThumbnails.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string),
 };

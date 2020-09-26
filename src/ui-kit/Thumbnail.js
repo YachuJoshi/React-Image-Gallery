@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import PropTypes from "prop-types";
 import { useActiveIndexContext } from "../context";
 
 import styles from "./Thumbnail.module.scss";
@@ -22,4 +23,9 @@ export const Thumbnail = ({ picture, index }) => {
       />
     </figure>
   );
+};
+
+Thumbnail.propTypes = {
+  picture: PropTypes.stringR.isRequired,
+  index: PropTypes.number,
 };

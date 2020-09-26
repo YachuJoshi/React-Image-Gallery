@@ -1,0 +1,17 @@
+@import '../styles/main';
+
+.Index {
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $color-white;
+  padding: 12px 28px;
+  font-weight: 500;
+  background-color: rgba($color-black, 0.4);
+  margin-right: 16px;
+
+  @include media-breakpoint-up(md) {
+    margin-right: 0;
+  }
+}

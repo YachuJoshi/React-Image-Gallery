@@ -11,6 +11,7 @@ import { Pagination } from "./Pagination";
 import { ImageThumbnails } from "./ImageThumbnails";
 import { SettingsPanel } from "./SettingsPanel";
 import { Controls } from "./Controls";
+import { IndexMark } from "./IndexMark";
 
 import { search } from "../utils";
 
@@ -22,7 +23,7 @@ const initialState = {
     { id: 1, value: "showFullScreenButton", isChecked: true },
     { id: 2, value: "showPlayButton", isChecked: true },
     { id: 3, value: "showBullets", isChecked: true },
-    { id: 4, value: "showIndex", isChecked: false },
+    { id: 4, value: "showIndex", isChecked: true },
   ],
 };
 
@@ -51,6 +52,7 @@ export const Gallery = () => {
     "showFullScreenButton",
     initialState.settings
   ).isChecked;
+  let showIndex = search("showIndex", initialState.settings).isChecked;
 
   const handleFullScreenChange = useCallback(() => {
     if (!isFullScreen) {
@@ -72,6 +74,7 @@ export const Gallery = () => {
           interval={playInterval}
           isPlaying={isPlaying}
         />
+        {showIndex && <IndexMark length={PICTURES.length} className="index" />}
         <Arrows maxLength={PICTURES.length - 1} className="icon-arrows" />
         <ImageThumbnails pictures={MINIFIED} className="image-thumbnail" />
         {showPlayButton && (
@@ -88,7 +91,7 @@ export const Gallery = () => {
           />
         )}
       </FullScreen>
-      {showBullets && <Pagination size={Length} />}
+      {showBullets && <Pagination pages={Length} />}
       <SettingsPanel
         playInterval={playInterval}
         setPlayInterval={setPlayInterval}

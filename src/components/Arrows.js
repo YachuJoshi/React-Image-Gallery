@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import PropTypes from "prop-types";
 import { useActiveIndexContext } from "../context";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
@@ -29,4 +30,9 @@ export const Arrows = ({ maxLength, className }) => {
       />
     </>
   );
+};
+
+Arrows.propTypes = {
+  maxLength: PropTypes.number.isRequired,
+  className: PropTypes.string,
 };

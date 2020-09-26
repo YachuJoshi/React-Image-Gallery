@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import PropTypes from "prop-types";
 import { useActiveIndexContext } from "../context";
 
 import styles from "./Circle.module.scss";
@@ -14,4 +15,8 @@ export const Circle = ({ index }) => {
       onClick={() => setActiveIndex(index)}
     />
   );
+};
+
+Circle.propTypes = {
+  index: PropTypes.number.isRequired,
 };

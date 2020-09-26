@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { Image } from "../ui-kit";
+import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
@@ -50,4 +51,12 @@ export const PictureBoard = ({
       </AutoPlaySwipeableViews>
     </>
   );
+};
+
+PictureBoard.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string),
+  interval: PropTypes.number.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  className: PropTypes.string,
+  mobileDimClassName: PropTypes.string,
 };
